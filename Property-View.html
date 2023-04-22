@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property VIEW</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="flex-div">
+        <div class="nav-left  flex-div">
+            <img src="images/cognizant logo1.jpg" class="logo">
+        </div>
+
+        <div class="nav-right flex-div">
+            <img src="images/cbreLogo.png" class="cbre-logo">
+            <a href="">
+                <p>Contact</p>
+            </a>
+            <a href="">
+                <p>Help</p>
+            </a>
+        </div>
+    </nav>
+
+    <form action="https://sheetdb.io/api/v1/n3yrqjfrrl4pi" method="POST" id="sheetdb-form">
+        <div class="card signup-card">
+            <div class="card-header">Property-View</div>
+            <!-- card body starts -->
+            <div class="card-body">
+
+                <div class="form-element">
+                    <div class="form-label"><label for="opportunity">Opportunity:</label></div>
+                    <div class="form-control-container">
+                        <input type="text" id="opportunity" name="data[opportunity]" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="form-element">
+                    <div class="form-label"><label for="test-case">No. of Test Cases: </label></div>
+                    <div class="form-control-container">
+                        <input type="number" id="test-case" name="data[no_of_test_cases]" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-element">
+                    <div class="form-label"><label for="automated">Automated: </label></div>
+                    <div class="form-control-container">
+                        <input type="number" id="automated" name="data[automated]" class="form-control">
+                    </div>
+                </div>
+
+
+                <div class="form-element">
+                    <div class="form-label"><label for="pass">Pass:</label></div>
+                    <div class="form-control-container">
+                        <input type="number" id="pass" name="data[pass]" class="form-control">
+                    </div>
+                </div>
+
+
+                <div class="form-element">
+                    <div class="form-label"><label for="fail">Fail:</label></div>
+                    <div class="form-control-container">
+                        <input type="number" id="fail" name="data[fail]" class="form-control">
+                    </div>
+                </div>
+
+
+                <div class="form-element">
+                    <div class="form-label"><label for="contact">CBRE Contact:</label></div>
+                    <div class="form-control-container">
+                        <input type="text" id="contact" name="data[cbre_contact]" class="form-control">
+                    </div>
+                </div>
+
+
+
+                <div class="form-element">
+                    <div class="form-label"><label for="estimation">Ballpark Estimation:</label></div>
+                    <div class="form-control-container">
+                        <textarea type="text" id="estimation" name="data[ballpark_estimation]"
+                            class="form-control"></textarea>
+                    </div>
+                </div>
+
+
+                <div class="form-element">
+                    <div class="form-label"><label for="timeline">Ballpark Timeline:</label></div>
+                    <div class="form-control-container">
+                        <textarea type="text" id="timeline" name="data[ballpark_timeline]"
+                            class="form-control"></textarea>
+                    </div>
+                </div>
+
+
+                <div class="form-element">
+                    <div class="form-label"><label for="planning">Planning to Coverage:</label></div>
+                    <div class="form-control-container">
+                        <textarea type="text" id="planning" name="data[planning_to_coverage]"
+                            class="form-control"></textarea>
+                    </div>
+                </div>
+
+
+                <div class="form-element">
+                    <div class="form-label"><label for="framework">Framework:</label></div>
+                    <div class="form-control-container">
+                        <input type="text" id="framework" name="data[framework]" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-element">
+                    <div class="form-label"><label for="resource">Resource:</label></div>
+                    <div class="form-control-container">
+                        <textarea type="text" id="resource" name="data[resource]" class="form-control"></textarea>
+                    </div>
+                </div>
+
+
+                <div class="form-element">
+                    <div class="form-label"><label for="priority">Priorities:</label></div>
+                    <div class="form-control-container">
+                        <textarea type="text" id="priority" name="data[priorities]" class="form-control"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-element">
+                    <div class="form-label"><label for="cicd">CI/CD:</label></div>
+                    <div class="form-control-container">
+                        <textarea type="text" id="cicd" name="data[ci/cd]" class="form-control"></textarea>
+                    </div>
+                </div>
+
+
+                <div class="form-element">
+                    <div class="form-label"><label for="smre">Smoke/Regression TC's: </label></div>
+                    <div class="form-control-container">
+                        <textarea type="text" id="smre" name="data[smoke/regression_tc]"
+                            class="form-control"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-element">
+                    <div class="form-label"><label for="own">Who Owns: </label></div>
+                    <div class="form-control-container">
+                        <input type="text" id="own" name="data[who_owns]" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-element">
+                    <div class="form-label"><label for="leaverged">How many times leaverged: </label> </div>
+                    <div class="form-control-container">
+                        <textarea type="text" id="leaverged" name="data[how_many_times_leaverged]"
+                            class="form-control"></textarea>
+                    </div>
+                </div>
+
+                <button>Submit</button>
+            </div>
+            <!-- card body ends -->
+        </div>
+
+    </form>
+    <script>
+        let form = document.querySelector("sheetdb-form");
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+            fetch(form.action, {
+                method: "POST",
+                body: new FormData(document.getElementById("sheetdb-form")),
+            })
+                .then(response => response.json())
+                .then((html) => {
+
+                    window.open('Property-View.html', '_blank');
+                })
+        })
+    </script>
+</body>
+
+</html>
